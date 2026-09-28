@@ -1,0 +1,828 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LUMÉA — Personal Color Analysis & Harmonic Styling</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- HEADER / NAVIGATION -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#" class="brand-logo-wrap spa-route" data-view="home">
+        <!-- Radiant Sun Emblem -->
+        <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <circle cx="12" cy="12" r="4" />
+          <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41" />
+        </svg>
+        <h1 class="brand-title">LUMÉA</h1>
+      </a>
+
+      <button class="mobile-toggle" aria-label="Toggle navigation">☰</button>
+
+      <nav>
+        <ul class="nav-menu">
+          <li><a href="#" class="nav-link active spa-route" data-view="home">HOME</a></li>
+          <li><a href="#" class="nav-link spa-route" data-view="method">OUR METHOD</a></li>
+          <li><a href="#" class="nav-link spa-route" data-view="palettes">THE PALETTES</a></li>
+          <li><a href="#" class="nav-link spa-route" data-view="consultation">CONSULTATIONS</a></li>
+          <li><a href="#" class="nav-link spa-route" data-view="journal">JOURNAL</a></li>
+          <li><a href="#" class="nav-link spa-route" data-view="my-palette">MY PALETTE</a></li>
+          <li><a href="#" class="nav-link open-booking-modal">BOOK NOW</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- ==================== VIEW 1: HOMEPAGE ==================== -->
+    <section id="view-home" class="view-section active-view">
+      
+      <!-- HERO SECTION -->
+      <div class="container">
+        <div class="hero-split-grid">
+          <div class="hero-left">
+            <h1 class="hero-headline">Find the colors<br>that feel like you.</h1>
+            <p class="hero-subtext">Discover your unique personal color palette through an immersive and intuitive color consultation. Unlock confidence and self-expression through light.</p>
+            <div class="hero-cta-group">
+              <a href="#" class="btn btn-outline spa-route" data-view="palettes">EXPLORE PALETTES</a>
+              <a href="#" class="btn btn-gold open-booking-modal">BOOK YOUR SESSION</a>
+            </div>
+          </div>
+
+          <div class="hero-right">
+            <div class="sunbeam-overlay"></div>
+            <!-- Color Wheel Artwork -->
+            <div class="wheel-artwork-container" id="heroColorWheel">
+              <!-- SVG generated via app.js -->
+            </div>
+            <!-- Surrounding Floating Swatches -->
+            <div class="floating-swatch swatch-vertical-1"></div>
+            <div class="floating-swatch swatch-rect-2"></div>
+            <div class="floating-swatch swatch-square-3"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SECTION: UNLOCK YOUR TRUE HUE (UPPER RIGHT CARDS GRID) -->
+      <div class="container">
+        <div class="unlock-grid-section">
+          <div class="unlock-content-col">
+            <span class="section-label">OUR METHOD</span>
+            <h2 class="section-title">Unlock your true hue</h2>
+            <p class="section-desc">Our method goes beyond seasons, focusing on your unique skin undertone, value, and chroma. We reveal the hues that make you glow, from the inside out.</p>
+            <div>
+              <a href="#" class="btn btn-outline spa-route" data-view="method">DISCOVER OUR METHOD</a>
+            </div>
+          </div>
+
+          <div class="unlock-cards-col">
+            <div class="seasonal-swatch-grid">
+              <!-- 9 Palette Swatch Cards -->
+              <div class="swatch-card">
+                <div class="swatch-block-grid">
+                  <div class="color-box" style="background-color: #B8A3BA"></div>
+                  <div class="color-box" style="background-color: #8E9AAF"></div>
+                  <div class="color-box" style="background-color: #D8A49B"></div>
+                  <div class="color-box" style="background-color: #9A9E8F"></div>
+                </div>
+                <div class="swatch-card-label">SOFT SUMMER</div>
+              </div>
+
+              <div class="swatch-card">
+                <div class="swatch-block-grid">
+                  <div class="color-box" style="background-color: #4A3525"></div>
+                  <div class="color-box" style="background-color: #828A5D"></div>
+                  <div class="color-box" style="background-color: #C85A32"></div>
+                  <div class="color-box" style="background-color: #B35629"></div>
+                </div>
+                <div class="swatch-card-label">DARK AUTUMN</div>
+              </div>
+
+              <div class="swatch-card">
+                <div class="swatch-block-grid">
+                  <div class="color-box" style="background-color: #F4A261"></div>
+                  <div class="color-box" style="background-color: #E9C46A"></div>
+                  <div class="color-box" style="background-color: #2A9D8F"></div>
+                  <div class="color-box" style="background-color: #E07A5F"></div>
+                </div>
+                <div class="swatch-card-label">BRIGHT SPRING</div>
+              </div>
+
+              <div class="swatch-card">
+                <div class="swatch-block-grid">
+                  <div class="color-box" style="background-color: #1D3557"></div>
+                  <div class="color-box" style="background-color: #E63946"></div>
+                  <div class="color-box" style="background-color: #1B4332"></div>
+                  <div class="color-box" style="background-color: #2A2421"></div>
+                </div>
+                <div class="swatch-card-label">DEEP WINTER</div>
+              </div>
+
+              <div class="swatch-card">
+                <div class="swatch-block-grid">
+                  <div class="color-box" style="background-color: #C85A32"></div>
+                  <div class="color-box" style="background-color: #DBA159"></div>
+                  <div class="color-box" style="background-color: #656D4A"></div>
+                  <div class="color-box" style="background-color: #4A3525"></div>
+                </div>
+                <div class="swatch-card-label">SOFT AUTUMN</div>
+              </div>
+
+              <div class="swatch-card">
+                <div class="swatch-block-grid">
+                  <div class="color-box" style="background-color: #E8A589"></div>
+                  <div class="color-box" style="background-color: #81B29A"></div>
+                  <div class="color-box" style="background-color: #F7D6C8"></div>
+                  <div class="color-box" style="background-color: #F4A261"></div>
+                </div>
+                <div class="swatch-card-label">LIGHT SPRING</div>
+              </div>
+
+              <div class="swatch-card">
+                <div class="swatch-block-grid">
+                  <div class="color-box" style="background-color: #2A9D8F"></div>
+                  <div class="color-box" style="background-color: #E76F51"></div>
+                  <div class="color-box" style="background-color: #E9C46A"></div>
+                  <div class="color-box" style="background-color: #81B29A"></div>
+                </div>
+                <div class="swatch-card-label">BRIGHT SPRING</div>
+              </div>
+
+              <div class="swatch-card">
+                <div class="swatch-block-grid">
+                  <div class="color-box" style="background-color: #CBC0D3"></div>
+                  <div class="color-box" style="background-color: #6B7B8C"></div>
+                  <div class="color-box" style="background-color: #D8A49B"></div>
+                  <div class="color-box" style="background-color: #9A8C98"></div>
+                </div>
+                <div class="swatch-card-label">SOFT SUMMER</div>
+              </div>
+
+              <div class="swatch-card">
+                <div class="swatch-block-grid">
+                  <div class="color-box" style="background-color: #E8A589"></div>
+                  <div class="color-box" style="background-color: #F7F4EA"></div>
+                  <div class="color-box" style="background-color: #E9C46A"></div>
+                  <div class="color-box" style="background-color: #2A9D8F"></div>
+                </div>
+                <div class="swatch-card-label">SOFT SPRING</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SECTION: LIFESTYLE SPLIT -->
+      <div class="container">
+        <div class="lifestyle-split-section">
+          <div class="unlock-content-col">
+            <span class="section-label">THE EXPERIENCE</span>
+            <h2 class="section-title">Color is more than a season.</h2>
+            <p class="section-desc">Discover the relationship between your natural coloring and the shades that bring your personal style into focus with clarity and grace.</p>
+            <div>
+              <a href="#" class="btn btn-outline spa-route" data-view="consultation">DISCOVER YOUR PALETTE</a>
+            </div>
+          </div>
+
+          <div class="lifestyle-img-col">
+            <div class="editorial-img-wrapper">
+              <img src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=800&q=80" alt="Luméa Color Analysis Experience" class="editorial-img">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SECTION: HOW LUMÉA WORKS -->
+      <div class="works-section">
+        <div class="container">
+          <span class="section-label">A REFRACTED APPROACH</span>
+          <h2 class="section-title">A more personal way to discover color.</h2>
+
+          <div class="works-grid">
+            <div class="work-step-card">
+              <span class="step-num">01</span>
+              <h3 class="step-title">OBSERVE</h3>
+              <p>Understand your natural coloring under gentle daylight conditions.</p>
+              <div class="step-swatch-row">
+                <div class="mini-swatch" style="background-color: #F7F4EA"></div>
+                <div class="mini-swatch" style="background-color: #E6BEA5"></div>
+                <div class="mini-swatch" style="background-color: #C89A82"></div>
+              </div>
+            </div>
+
+            <div class="work-step-card">
+              <span class="step-num">02</span>
+              <h3 class="step-title">SELECT</h3>
+              <p>Choose your skin, hair, and eye tones through our intuitive precision loupe sampling cursor.</p>
+              <div class="step-swatch-row">
+                <div class="mini-swatch" style="background-color: #D6A88E"></div>
+                <div class="mini-swatch" style="background-color: #4A3428"></div>
+                <div class="mini-swatch" style="background-color: #5B6B5C"></div>
+              </div>
+            </div>
+
+            <div class="work-step-card">
+              <span class="step-num">03</span>
+              <h3 class="step-title">DISCOVER</h3>
+              <p>Reveal your overarching seasonal palette and tailored expressions for wardrobe & makeup.</p>
+              <div class="step-swatch-row">
+                <div class="mini-swatch" style="background-color: #E07A5F"></div>
+                <div class="mini-swatch" style="background-color: #F4A261"></div>
+                <div class="mini-swatch" style="background-color: #2A9D8F"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- EDITORIAL QUOTE SECTION -->
+      <div class="quote-section">
+        <div class="container">
+          <blockquote class="editorial-quote">
+            “Wearing the right colors is like coming home to yourself.”
+          </blockquote>
+          <p class="quote-subtext">After a Luméa consultation, clients discover a new sense of clarity, effortless dressing, and an authentic reflection of their personality.</p>
+        </div>
+      </div>
+
+      <!-- NEWSLETTER & POLAROID SECTION -->
+      <div class="container">
+        <div class="newsletter-section">
+          <div class="polaroid-stack">
+            <div class="polaroid-card">
+              <img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=400&q=80" alt="Color Moodboard">
+            </div>
+            <div class="polaroid-card">
+              <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=400&q=80" alt="Harmonious Style">
+            </div>
+          </div>
+
+          <div>
+            <span class="section-label">JOURNAL & REFLECTIONS</span>
+            <h2 class="section-title">Ready to find your light?</h2>
+            <p class="section-desc">Join our newsletter for exclusive color insights, seasonal tips, and a free guide to ‘The 5 Essential Colors Everyone Needs’.</p>
+            <form class="newsletter-form">
+              <input type="email" placeholder="Your email address" class="newsletter-input" required>
+              <button type="submit" class="btn btn-gold">GET THE GUIDE</button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ==================== VIEW 2: THE PALETTES ==================== -->
+    <section id="view-palettes" class="view-section">
+      <div class="page-header">
+        <div class="container">
+          <span class="section-label">THE HARMONIC ARCHIVE</span>
+          <h1 class="page-title">The palettes</h1>
+          <p class="page-subtitle">Four seasons. Endless expressions of you.</p>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="seasons-list">
+          
+          <!-- SPRING -->
+          <div class="season-row">
+            <div>
+              <span class="season-traits-tag">Warm • Light • Clear</span>
+              <h2 class="season-meta-title">SPRING</h2>
+              <p>Spring colors are luminous, warm, and radiant. Inspired by blooming blossoms, warm golden sunlight, and fresh greenery. They illuminate skins with golden or peachy undertones.</p>
+            </div>
+            <div>
+              <div class="season-swatch-bar">
+                <div class="bar-item" style="background-color: #E07A5F" title="Warm Coral"></div>
+                <div class="bar-item" style="background-color: #F4A261" title="Peach Blossom"></div>
+                <div class="bar-item" style="background-color: #E9C46A" title="Golden Wheat"></div>
+                <div class="bar-item" style="background-color: #2A9D8F" title="Warm Teal"></div>
+                <div class="bar-item" style="background-color: #F7F4EA" title="Soft Ivory"></div>
+              </div>
+              <div class="season-specs-grid">
+                <div class="spec-category">
+                  <h5>CLOTHING</h5>
+                  <p>Coral, Peach, Warm Beige, Cream, Bright Teal</p>
+                </div>
+                <div class="spec-category">
+                  <h5>MAKEUP</h5>
+                  <p>Peach Nude, Warm Coral Lip, Warm Bronze</p>
+                </div>
+                <div class="spec-category">
+                  <h5>METALS</h5>
+                  <p>Yellow Gold, Rose Gold, Warm Brass</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- SUMMER -->
+          <div class="season-row">
+            <div>
+              <span class="season-traits-tag">Cool • Light • Soft</span>
+              <h2 class="season-meta-title">SUMMER</h2>
+              <p>Summer shades are muted, cool, and soft like sea mist and lavender fields. Gentle blues, powdery pinks, and dusty slates soothe and complement delicate cool skin undertones.</p>
+            </div>
+            <div>
+              <div class="season-swatch-bar">
+                <div class="bar-item" style="background-color: #D8A49B" title="Dusty Rose"></div>
+                <div class="bar-item" style="background-color: #B8A3BA" title="Soft Lavender"></div>
+                <div class="bar-item" style="background-color: #8E9AAF" title="Slate Blue"></div>
+                <div class="bar-item" style="background-color: #9A9E8F" title="Sage Green"></div>
+                <div class="bar-item" style="background-color: #EFD3D7" title="Powder Pink"></div>
+              </div>
+              <div class="season-specs-grid">
+                <div class="spec-category">
+                  <h5>CLOTHING</h5>
+                  <p>Dusty Rose, Slate Blue, Soft Sage, Lavender</p>
+                </div>
+                <div class="spec-category">
+                  <h5>MAKEUP</h5>
+                  <p>Cool Mauve, Rose Tint, Soft Berry Lip</p>
+                </div>
+                <div class="spec-category">
+                  <h5>METALS</h5>
+                  <p>Polished Silver, Platinum, White Gold</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- AUTUMN -->
+          <div class="season-row">
+            <div>
+              <span class="season-traits-tag">Warm • Deep • Soft</span>
+              <h2 class="season-meta-title">AUTUMN</h2>
+              <p>Autumn colors bring depth, warmth, and grounded richness. Terracotta, burnt amber, olive green, and warm espresso create an effortless sophisticated atmosphere for warm rich complexions.</p>
+            </div>
+            <div>
+              <div class="season-swatch-bar">
+                <div class="bar-item" style="background-color: #C85A32" title="Terracotta"></div>
+                <div class="bar-item" style="background-color: #828A5D" title="Olive Green"></div>
+                <div class="bar-item" style="background-color: #B35629" title="Burnt Amber"></div>
+                <div class="bar-item" style="background-color: #DBA159" title="Mustard Gold"></div>
+                <div class="bar-item" style="background-color: #4A3525" title="Espresso"></div>
+              </div>
+              <div class="season-specs-grid">
+                <div class="spec-category">
+                  <h5>CLOTHING</h5>
+                  <p>Terracotta, Olive, Burnt Amber, Warm Camel</p>
+                </div>
+                <div class="spec-category">
+                  <h5>MAKEUP</h5>
+                  <p>Spiced Brick Lip, Warm Bronze, Cinnamon</p>
+                </div>
+                <div class="spec-category">
+                  <h5>METALS</h5>
+                  <p>Antique Brass, Copper, Deep Yellow Gold</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- WINTER -->
+          <div class="season-row">
+            <div>
+              <span class="season-traits-tag">Cool • Deep • Clear</span>
+              <h2 class="season-meta-title">WINTER</h2>
+              <p>Winter colors possess high clarity, deep intensity, and striking contrast. Vivid emeralds, royal blue, deep ruby, and obsidian black bring high-fashion distinction to cool high-contrast skin.</p>
+            </div>
+            <div>
+              <div class="season-swatch-bar">
+                <div class="bar-item" style="background-color: #1D3557" title="Royal Sapphire"></div>
+                <div class="bar-item" style="background-color: #E63946" title="True Ruby"></div>
+                <div class="bar-item" style="background-color: #1B4332" title="Deep Emerald"></div>
+                <div class="bar-item" style="background-color: #9B5DE5" title="Vivid Violet"></div>
+                <div class="bar-item" style="background-color: #1A1817" title="Obsidian"></div>
+              </div>
+              <div class="season-specs-grid">
+                <div class="spec-category">
+                  <h5>CLOTHING</h5>
+                  <p>Sapphire, Ruby Red, Emerald, Pure White, Black</p>
+                </div>
+                <div class="spec-category">
+                  <h5>MAKEUP</h5>
+                  <p>Deep Plum, Cool Crimson Lip, True Red</p>
+                </div>
+                <div class="spec-category">
+                  <h5>METALS</h5>
+                  <p>High-Shine Platinum, Sterling Silver</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== VIEW 3: OUR METHOD ==================== -->
+    <section id="view-method" class="view-section">
+      <div class="page-header">
+        <div class="container">
+          <span class="section-label">THE LUMÉA PHILOSOPHY</span>
+          <h1 class="page-title">Your colors, understood differently.</h1>
+          <p class="page-subtitle">A precise synthesis of undertone, value, and chromatic harmony.</p>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="method-timeline">
+          
+          <div class="method-step-row">
+            <div class="method-circle-badge">01</div>
+            <div class="method-step-content">
+              <h3>OBSERVE</h3>
+              <p>We start by examining your natural pigments in clear daylight conditions, setting aside environmental shadows or artificial indoor casts.</p>
+            </div>
+          </div>
+
+          <div class="method-step-row">
+            <div class="method-circle-badge">02</div>
+            <div class="method-step-content">
+              <h3>SELECT</h3>
+              <p>Using our precision loupe color sampling interface, you pinpoint the exact hexadecimal tones of your skin undertone, natural hair highlights, and iris depth.</p>
+            </div>
+          </div>
+
+          <div class="method-step-row">
+            <div class="method-circle-badge">03</div>
+            <div class="method-step-content">
+              <h3>ANALYZE</h3>
+              <p>Our rule-based color engine calculates the three core dimensions: Warmth (Golden vs. Rosy), Depth (Light vs. Deep), and Chroma (Clear vs. Soft).</p>
+            </div>
+          </div>
+
+          <div class="method-step-row">
+            <div class="method-circle-badge">04</div>
+            <div class="method-step-content">
+              <h3>DISCOVER</h3>
+              <p>Your personal seasonal color family is revealed alongside a tailored horizontal swatch palette and tonal guidelines.</p>
+            </div>
+          </div>
+
+          <div class="method-step-row">
+            <div class="method-circle-badge">05</div>
+            <div class="method-step-content">
+              <h3>EXPLORE</h3>
+              <p>Test individual wardrobe shades, makeup hues, and jewelry metals in real time with our Fashion & Makeup Color Checkers.</p>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="method-notice-box">
+          <p><strong>Note on Methodology:</strong> Luméa deliberately utilizes manual user-guided color sampling rather than automatic facial recognition AI. This ensures privacy, tactile accuracy, and a deeper personal awareness of your own unique coloring.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== VIEW 4: CONSULTATION TOOL (FIND MY COLORS) ==================== -->
+    <section id="view-consultation" class="view-section">
+      <div class="page-header">
+        <div class="container">
+          <span class="section-label">INTERACTIVE ANALYSIS</span>
+          <h1 class="page-title">Find your colors.</h1>
+          <p class="page-subtitle">Begin with a photo, then discover the colors that feel most like you.</p>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="consultation-container">
+          
+          <!-- Progress Steps -->
+          <div class="consultation-progress">
+            <div id="prog-step-1" class="progress-step active">01 PHOTO</div>
+            <div id="prog-step-2" class="progress-step">02 YOUR COLORS</div>
+            <div id="prog-step-3" class="progress-step">03 YOUR PALETTE</div>
+          </div>
+
+          <!-- STEP 01 PANE: UPLOAD PHOTO -->
+          <div id="step-1-pane" class="tool-step-pane active">
+            <div style="text-align: center; margin-bottom: 2.5rem;">
+              <h2 class="section-title">Let’s begin with you.</h2>
+              <p class="section-desc" style="margin: 0 auto;">Upload a clear photo where your skin, hair, and eyes are visible under natural lighting.</p>
+            </div>
+
+            <div class="upload-dropzone" id="uploadDropzone">
+              <svg class="upload-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M4 16v1a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3v-1M16 8l-4-4m0 0L8 8m4-4v12"/>
+              </svg>
+              <h3>UPLOAD PHOTO</h3>
+              <p style="margin-top: 0.5rem; font-size: 0.85rem;">Click or drop image here (JPEG / PNG)</p>
+              <input type="file" id="photoFileInput" accept="image/*" style="display: none;">
+            </div>
+
+            <div class="sample-preset-wrapper">
+              <span class="section-label">OR TRY WITH A PRESET SAMPLE MODEL</span>
+              <div class="preset-thumbs">
+                <button class="preset-thumb-btn selected" data-preset="warm">
+                  <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=300&q=80" alt="Warm Model">
+                </button>
+                <button class="preset-thumb-btn" data-preset="cool">
+                  <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=300&q=80" alt="Cool Model">
+                </button>
+                <button class="preset-thumb-btn" data-preset="autumn">
+                  <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=300&q=80" alt="Autumn Model">
+                </button>
+              </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 3rem;">
+              <button class="btn btn-gold" id="btnToSampling">CONTINUE TO SAMPLING</button>
+            </div>
+          </div>
+
+          <!-- STEP 02 PANE: COLOR SAMPLING INTERFACE -->
+          <div id="step-2-pane" class="tool-step-pane">
+            <div style="text-align: center; margin-bottom: 2rem;">
+              <h2 class="section-title">Pick your colors</h2>
+              <p class="section-desc" style="margin: 0 auto;">Hover and click over your skin, hair, and eyes to sample exact pixel hues.</p>
+            </div>
+
+            <div class="sampling-workspace">
+              <!-- Canvas Viewport -->
+              <div class="canvas-viewport-container">
+                <canvas id="photoCanvas"></canvas>
+                <div class="loupe-cursor" id="loupeCursor"></div>
+              </div>
+
+              <!-- Control & Swatch Panel -->
+              <div class="sampling-control-panel">
+                <div class="sample-mode-tabs">
+                  <button class="sample-tab-btn active" data-mode="skin">SKIN</button>
+                  <button class="sample-tab-btn" data-mode="hair">HAIR</button>
+                  <button class="sample-tab-btn" data-mode="eyes">EYES</button>
+                </div>
+
+                <!-- Swatch Cards -->
+                <div class="swatch-display-card">
+                  <div class="swatch-preview-circle" id="swatch-skin" style="background-color: #D6A88E"></div>
+                  <div class="swatch-meta">
+                    <div class="swatch-label">SKIN TONE</div>
+                    <div class="swatch-hex" id="hex-skin">#D6A88E</div>
+                  </div>
+                  <div class="swatch-status-icon" id="status-skin">○</div>
+                </div>
+
+                <div class="swatch-display-card">
+                  <div class="swatch-preview-circle" id="swatch-hair" style="background-color: #4A3428"></div>
+                  <div class="swatch-meta">
+                    <div class="swatch-label">HAIR TONE</div>
+                    <div class="swatch-hex" id="hex-hair">#4A3428</div>
+                  </div>
+                  <div class="swatch-status-icon" id="status-hair">○</div>
+                </div>
+
+                <div class="swatch-display-card">
+                  <div class="swatch-preview-circle" id="swatch-eyes" style="background-color: #5B6B5C"></div>
+                  <div class="swatch-meta">
+                    <div class="swatch-label">EYE TONE</div>
+                    <div class="swatch-hex" id="hex-eyes">#5B6B5C</div>
+                  </div>
+                  <div class="swatch-status-icon" id="status-eyes">○</div>
+                </div>
+
+                <div style="margin-top: 2rem;">
+                  <button class="btn btn-outline" id="btnAnalyzeColors" style="width: 100%;">ANALYZE MY COLORS</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- STEP 03 PANE: PERSONAL RESULT -->
+          <div id="step-3-pane" class="tool-step-pane">
+            <div class="result-header-banner">
+              <span class="section-label">Your Luméa Palette</span>
+              <h1 class="result-season-name" id="resSeasonName">SPRING</h1>
+              <p id="resSeasonTagline" class="section-desc" style="margin: 0 auto 1rem;">Warm, light, and clear colors complement your natural coloring.</p>
+              <div class="result-traits-pills" id="resTraitsPills">
+                <!-- Pills inserted via JS -->
+              </div>
+            </div>
+
+            <!-- Horizontal Swatches Bar -->
+            <div class="result-swatches-hero" id="resHeroSwatches">
+              <!-- Swatches inserted via JS -->
+            </div>
+
+            <h3 style="font-size: 1.5rem; text-align: center; margin-bottom: 2rem;">Your best colors</h3>
+
+            <div class="categories-grid">
+              <div class="category-card">
+                <h4>CLOTHING</h4>
+                <div class="category-swatch-list" id="resClothingSwatches"></div>
+              </div>
+
+              <div class="category-card">
+                <h4>MAKEUP</h4>
+                <div class="category-swatch-list" id="resMakeupSwatches"></div>
+              </div>
+
+              <div class="category-card">
+                <h4>ACCESSORIES</h4>
+                <div class="category-swatch-list" id="resAccessoryMetals"></div>
+              </div>
+            </div>
+
+            <div class="explore-less-box">
+              <h4>Colors to explore less</h4>
+              <p id="resAvoidText">Colors to explore in softer accent doses rather than full monochrome garments.</p>
+            </div>
+
+            <div style="display: flex; justify-content: center; gap: 1.25rem;">
+              <button class="btn btn-gold spa-route" data-view="what-suits-me">EXPLORE WHAT SUITS ME</button>
+              <button class="btn btn-outline spa-route" data-view="my-palette">SAVE MY PALETTE</button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Transition Loader Overlay -->
+      <div class="analysis-loader-overlay" id="analysisLoader">
+        <div class="animating-swatches-ring">
+          <div class="pulsing-swatch"></div>
+          <div class="pulsing-swatch"></div>
+          <div class="pulsing-swatch"></div>
+          <div class="pulsing-swatch"></div>
+        </div>
+        <div class="loader-status-text" id="loaderStatusText">Reading your colors…</div>
+      </div>
+    </section>
+
+    <!-- ==================== VIEW 5: WHAT SUITS ME? (COLOR CHECKERS) ==================== -->
+    <section id="view-what-suits-me" class="view-section">
+      <div class="page-header">
+        <div class="container">
+          <span class="section-label">WARDROBE & BEAUTY EXPLORER</span>
+          <h1 class="page-title">What suits me?</h1>
+          <p class="page-subtitle">Explore colors that complement your personal palette.</p>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="checker-workspace">
+          
+          <div class="checker-card">
+            <span class="section-label">COLOR HARMONY CHECKER</span>
+            <h2 class="section-title">Which color are you curious about?</h2>
+            <p class="section-desc">Select a shade using the color picker or input a hex code to check its harmony with your Luméa palette.</p>
+
+            <div class="color-input-controls">
+              <input type="color" id="checkerColorPicker" value="#C85A32" class="color-picker-input">
+              <input type="text" id="checkerHexInput" value="#C85A32" class="hex-text-input">
+              <button class="btn btn-gold" id="btnCheckColor">CHECK THIS COLOR</button>
+            </div>
+
+            <div style="margin-top: 1.5rem;">
+              <span style="font-size: 0.75rem; font-weight: 700; letter-spacing: 0.12em; color: var(--color-text-muted);">POPULAR SHADES TO TEST:</span>
+              <div class="preset-chip-list">
+                <div class="preset-chip" style="background-color: #C85A32" data-hex="#C85A32" title="Terracotta"></div>
+                <div class="preset-chip" style="background-color: #00E5FF" data-hex="#00E5FF" title="Electric Blue"></div>
+                <div class="preset-chip" style="background-color: #D8A49B" data-hex="#D8A49B" title="Dusty Rose"></div>
+                <div class="preset-chip" style="background-color: #656D4A" data-hex="#656D4A" title="Olive Green"></div>
+                <div class="preset-chip" style="background-color: #FFEA00" data-hex="#FFEA00" title="Bright Yellow"></div>
+                <div class="preset-chip" style="background-color: #1D3557" data-hex="#1D3557" title="Navy Blue"></div>
+              </div>
+            </div>
+
+            <!-- Result Evaluation Card -->
+            <div class="checker-result-card" id="checkerResultCard">
+              <span id="checkStatusBadge" class="result-status-badge status-harmonious">Harmonious Match</span>
+              <h3 id="checkMsgTitle" style="font-size: 1.5rem; margin-bottom: 0.75rem;">This color suits you.</h3>
+              <p id="checkMsgBody" style="margin-bottom: 1.25rem;">This hue belongs to your seasonal family and creates natural radiance against your skin undertone.</p>
+
+              <div id="checkAlternativesRow" class="alternatives-swatch-row" style="display: none;">
+                <!-- Alternatives populated via JS -->
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== VIEW 6: MY PALETTE ==================== -->
+    <section id="view-my-palette" class="view-section">
+      <div class="page-header">
+        <div class="container">
+          <span class="section-label">SAVED CONSULTATION</span>
+          <h1 class="page-title">My Luméa Palette</h1>
+        </div>
+      </div>
+
+      <div class="container" style="padding: 4rem 0 6rem;">
+        <div id="myPaletteContent" class="consultation-container" style="padding: 4rem 3rem;">
+          <!-- Dynamically populated via app.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== VIEW 7: JOURNAL ==================== -->
+    <section id="view-journal" class="view-section">
+      <div class="page-header">
+        <div class="container">
+          <span class="section-label">MAGAZINE & ESSAYS</span>
+          <h1 class="page-title">Journal</h1>
+          <p class="page-subtitle">Reflections on tone, wardrobe clarity, and natural harmony.</p>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="journal-grid">
+          
+          <div class="journal-card">
+            <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=600&q=80" alt="Article 1" class="journal-img">
+            <div class="journal-body">
+              <span class="journal-date">SEPTEMBER 2026 • STYLE ESSAY</span>
+              <h3 class="journal-title">How color shapes personal style</h3>
+              <p>Discover why wearing your natural palette elevates confidence and transforms clothing choices into effortless self-expression.</p>
+            </div>
+          </div>
+
+          <div class="journal-card">
+            <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=600&q=80" alt="Article 2" class="journal-img">
+            <div class="journal-body">
+              <span class="journal-date">AUGUST 2026 • UNDERTONE GUIDE</span>
+              <h3 class="journal-title">Understanding warm and cool undertones</h3>
+              <p>A deep dive into skin chroma, capillary undertones, and how light refracts through different skin values.</p>
+            </div>
+          </div>
+
+          <div class="journal-card">
+            <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=600&q=80" alt="Article 3" class="journal-img">
+            <div class="journal-body">
+              <span class="journal-date">JULY 2026 • WARDROBE ESSENTIALS</span>
+              <h3 class="journal-title">Why some neutrals feel more natural on you</h3>
+              <p>Not all beige is created equal. Learn to distinguish between warm camel, dusty greige, and cool oat tones.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-logo">LUMÉA</div>
+      <p class="footer-tagline">“Find the colors that feel like you.”</p>
+      
+      <ul class="footer-links">
+        <li><a href="#" class="spa-route" data-view="home">HOME</a></li>
+        <li><a href="#" class="spa-route" data-view="method">OUR METHOD</a></li>
+        <li><a href="#" class="spa-route" data-view="palettes">THE PALETTES</a></li>
+        <li><a href="#" class="spa-route" data-view="consultation">CONSULTATIONS</a></li>
+        <li><a href="#" class="spa-route" data-view="journal">JOURNAL</a></li>
+      </ul>
+
+      <div class="footer-bottom">
+        <div>© 2026 Luméa • All Rights Reserved</div>
+        <div>INSTAGRAM • PINTEREST • JOURNAL</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- BOOKING SESSION MODAL -->
+  <div class="modal-backdrop" id="bookingModal">
+    <div class="modal-window">
+      <div class="modal-close-btn" id="closeBookingModal">×</div>
+      <span class="section-label">RESERVE AN APPOINTMENT</span>
+      <h2 class="section-title" style="margin-bottom: 0.5rem;">Book your session</h2>
+      <p style="margin-bottom: 2rem;">Experience a 1-on-1 private Luméa color analysis session with our senior color consultants.</p>
+
+      <form id="bookingForm">
+        <div style="display: flex; flex-direction: column; gap: 1.25rem;">
+          <div>
+            <label style="font-size: 0.75rem; font-weight: 700; letter-spacing: 0.12em; display: block; margin-bottom: 0.4rem;">FULL NAME</label>
+            <input type="text" required placeholder="Elena Rostova" style="width: 100%; padding: 0.85rem; border-radius: 8px; border: 1px solid var(--color-border); font-family: var(--font-sans);">
+          </div>
+          <div>
+            <label style="font-size: 0.75rem; font-weight: 700; letter-spacing: 0.12em; display: block; margin-bottom: 0.4rem;">EMAIL ADDRESS</label>
+            <input type="email" required placeholder="elena@example.com" style="width: 100%; padding: 0.85rem; border-radius: 8px; border: 1px solid var(--color-border); font-family: var(--font-sans);">
+          </div>
+          <div>
+            <label style="font-size: 0.75rem; font-weight: 700; letter-spacing: 0.12em; display: block; margin-bottom: 0.4rem;">PREFERRED CONSULTATION TYPE</label>
+            <select style="width: 100%; padding: 0.85rem; border-radius: 8px; border: 1px solid var(--color-border); font-family: var(--font-sans);">
+              <option>Digital Personal Color Analysis Session (Virtual)</option>
+              <option>In-Studio Luxury Color & Styling Atelier (Private)</option>
+              <option>Wardrobe Harmony Calibration Package</option>
+            </select>
+          </div>
+          <div style="margin-top: 1rem;">
+            <button type="submit" class="btn btn-gold" style="width: 100%;">REQUEST APPOINTMENT</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
